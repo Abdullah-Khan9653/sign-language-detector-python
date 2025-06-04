@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "E:\sign-language-detector-python\sign-language-detector-python\inference_classifier.py", line 7, in <module>
+    import pyttsx3
+ModuleNotFoundError: No module named 'pyttsx3'
