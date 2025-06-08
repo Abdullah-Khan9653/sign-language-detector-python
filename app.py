@@ -61,10 +61,14 @@ with col4:
 
 # Display current sentence
 st.markdown("---")
-if st.session_state.sentence:
-    st.success(f"**Current Sentence:** {st.session_state.sentence}")
-else:
-    st.info("**Current Sentence:** (empty)")
+# Editable sentence input
+st.markdown("**✏️ Edit Sentence Below:**")
+edited_sentence = st.text_input("Current Sentence", st.session_state.sentence, label_visibility="collapsed")
+
+# Update session state if edited manually
+if edited_sentence != st.session_state.sentence:
+    st.session_state.sentence = edited_sentence
+
 
 st.markdown("---")
 
